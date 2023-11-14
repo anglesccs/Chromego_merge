@@ -30,6 +30,7 @@ jobs:
         run: python merge.py  # 替换为你的 merge.py 脚本名称
       - name: Commit Changes
         run: |
+          git config core.ignorecase false
           git add .
           git commit -m "Updated at $(date '+%Y-%m-%d %H:%M:%S')"
           git push
